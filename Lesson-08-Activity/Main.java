@@ -28,13 +28,13 @@ double f to c (double f){
 }
 
 double sphereVolume (double volume){
-    double volume = (4/3.0) * Math.PI* r*r*r;
+    double Volume = (4/3.0) * Math.PI* r*r*r;
     return v; 
 }
 
-double coneVolume (double volume){
-volume = (1/3) * math.pi * (radius**2) * height;
-  return volume;
+double coneVolume (double r, double h){
+double v = (1/3) * math.pi *r*r*h;
+  return v;
 }
 
 double dist = distance(point1X, point1Y, point2X, point2Y);
