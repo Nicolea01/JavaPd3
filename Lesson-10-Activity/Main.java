@@ -11,7 +11,10 @@ class Main {
 	isGraduating(12, 44); //return true
 	isGraduating(12, 30); //return false
 	isGraduating(10, 44); //return true
-
+    BMI( 90, 63); //return 15.9 = Underweight
+	shippingCost(12); //return 10.0
+	blueorViolet(650); //return true
+	blueorViolet(720); //return true
   }
    double gpa(double gpa){
 	if(gpa > 90){
@@ -21,7 +24,7 @@ class Main {
 	}
    }
 
-   boolean isGraduating(int gradelvl, int credits){
+   String isGraduating(int gradelvl, int credits){
 	if(gradelvl == 12 && credits >=44){
 		return true;
 	}else{
@@ -53,5 +56,15 @@ class Main {
 		return 10.00 + ((weight/25)*.02);
 	}
    }
-  
+
+   boolean blueorViolet(int lightFrequency, String color){
+	if (( lightFrequency >= 600 && lightFrequency <= 
+	670) || (lightFrequency >= 700 && lightFrequency <= 750)){
+
+	}
+		return true;
+	}else if{
+		return false;
+	}
+   }
 }
