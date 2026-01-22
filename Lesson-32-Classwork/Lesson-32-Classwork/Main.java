@@ -15,26 +15,15 @@ class Main {
 
     
     //Create a new student objects 
-    Student student1 = new Student("Tom",9,g1,courses1);
-    Student student2 = new Student("Jerry",11,g2,courses2);
+    Student s1 = new Student("Tom", 12, 3.4, g1, courses1);
+    Student s2 = new Student("Jerry", 11, 3.9, g2, courses2);
 
-    if(student1.calculateAvg() > 70){
-      print(student1.firstName);
-    }
-    if(student2.calculateAvg() > 70){
-      print(student2.firstName);
-    }
-    if(student1.gradeLevel <= 10 && (student1.calculateAvg() >= 60 && student1.calculateAvg()<= 70)){
-      print(student1.firstName);
-    }
-    if(student2.gradeLevel <= 10 && (student2.calculateAvg() >= 60 && student2.calculateAvg()<= 70)){
-      print(student2.firstName);
-    }
-  
-    
-   
-    
-  }
+    s1.calculateAvg();
+    s1.checkCourse("HUF43X");
+    s2.calculateAvg();
+    s2.checkCourse("EEFG7QH");
+
+
 
 
   
