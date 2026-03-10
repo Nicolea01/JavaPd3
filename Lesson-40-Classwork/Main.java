@@ -18,14 +18,13 @@ class Main {
      
 
       String queryResult="";
-      String sql = "Select * From cr101 Where Room  = '106' AND Period = '3'; ";
+      String sql = "Select * From cr101 Where Room = '106' AND Period = '3';";
 
      
-		  Database   db =  new  Database("jdbc:sqlite:cr101.db");	
+		  Database   db =  new  Database("jdbc:sqlite:cr101.db");
 
-      queryResult = db.runSQL(sql, "table- auto");
+      queryResult = db.runSQL(sql, "table-auto");
       print(queryResult);
-
 
       
       
