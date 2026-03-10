@@ -21,9 +21,12 @@ class Main {
     String queryResult="";
     String sql ="Select * From cr101 Where teacher1 = 'BANU';";
 
+    String sql0 ="Select * From cr101 Where teacher1 = 'PORCHETTA' AND Period = '10';";
+
     Database db = new Database("jdbc:sqlite:students.db");
 
-    queryResult = db.runSQL(sql, "table-auto");
+    //queryResult = db.runSQL(sql, "table-auto");
+    queryResult = db.runSQL(sql0, "table-auto");
     print(queryResult);
 
    
