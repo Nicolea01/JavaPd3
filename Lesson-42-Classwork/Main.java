@@ -20,7 +20,7 @@ class Main {
       String queryResult="";
       String sql = "";
 
-      
+      SQL = "INSERT INTO cr101(course,section, period, teacher1, room ) VALUES ('MCLUB1)";
 
      
     
