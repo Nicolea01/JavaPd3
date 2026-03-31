@@ -39,23 +39,15 @@ class Main {
    // Add your  code here
    server.createContext("/", new RouteHandler("You are connected, but route not given or incorrect") );
 
-   String sql = " Select * from customers";
-   server.createContext("/customers", new RouteHandler(db,sql) );
+   String sql = "";
+   sql  = " Select * from employees ";
+   server.createContext("/employees", new RouteHandler(db,sql) );
 
-   String sql1  = " Select * from employees";
-   server.createContext("/employees", new RouteHandler(db,sql1) );
-
-   String sql2 = "Select * From tracks, * From artists";
-   sql2 += "Inner Join albums On artists.artistsId = albums.artistsId";
-   sql2 += "Inner Join tracks On albums.albumId = tracks.albumId";
-   sql2 += "Limit 10";
-   server.createContext("/albumsinfo", new RouteHandler(db,sql2) );
-
-   String sql3 = "Select customers.FirstName, customers.LastName, tracks.name, invoices.invoiceDate from customers ";
-   sql3 += "Inner Join invoices On customers.customerId = invoices.customerId";
-   sql3 += "Inner Join invoice_items On invoices.invoiceId = invoice_items.invoiceId";
-   sql3 += "Inner Join tracks On invoice_items.trackId = tracks.trackId";
-   sql3 += "Limit 10";
+   sql  = " Select tracks.name, albums.title, ";
+   sql += " From employees ";
+   sql += " Inner Join albums ON tracks.albumId=albums.albumId ";
+   server.createContext("/employees/tracks", new RouteHandler(db,sql) );
+   
       
     //Start the server
     server.start();
