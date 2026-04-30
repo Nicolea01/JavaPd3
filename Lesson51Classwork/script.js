@@ -31,5 +31,19 @@ function generateCards(employees){
 
   output.innerHTML = build;
   
+  function filter(){
+  let city = document.getElementById("city").value;
+
+  let newEmployees = [];
+
+  for(let x = 0; x <employees.length; x++){
+    let employee = employees[x];
+    if(employee.City == city){
+      newEmployees.push(employee);
+    }
+  }
+  console.log(`number found${newEmployees.length}`)
+  generateCards(newEmployees);
+}
 }
 
